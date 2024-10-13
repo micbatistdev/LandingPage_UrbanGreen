@@ -1,0 +1,755 @@
+/* !-- PROJETO INTEGRADO MULTIDICIPLICAR  (PIM) - Folha de Estilo CSS */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  min-height: 200vh;
+}
+
+.container {
+  padding: 70px 0;
+}
+#nav-container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Barra de navegação */
+
+.navbar-expand-lg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.6s;
+  padding: 75px 4%;
+  z-index: 100000;
+}
+.navbar-expand-lg.scroll {
+  background-color: #2e8b57;
+  padding: 10px 4%;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+#logo {
+  width: 75px;
+  padding-left: 5px;
+  filter: drop-shadow(5px 5px 10px rgba(95, 255, 2, 0.397));
+}
+.navbar-brand {
+  margin: 0;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+}
+.navbar-brand > p {
+  margin: 0;
+  position: relative;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.6s;
+  color: #fff;
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+}
+
+/* Menu_Hamburguer */
+.navbar-toggler-icon {
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  transition: transform 0.5s ease, background-image 0.5s ease;
+  background-image: url('../img/hamburger.png'); 
+}
+
+.navbar-toggler {
+  border-color: #fff;
+}
+
+/* Define o ícone do hamburger quando o menu está fechado */
+.navbar-toggler.collapsed .navbar-toggler-icon {
+  background-image: url('../img/hamburger.png'); /* Exibe hamburger quando fechado */
+}
+
+/* Altera o ícone para X e gira quando o menu está aberto */
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+  transform: rotate(90deg); /* Gira o ícone ao abrir o menu */
+  display: hidden;
+  background-image: url('../img/x.png'); 
+}
+
+#navbar-links ul {
+  list-style-type: none;
+}
+#navbar-links ul li {
+  display: inline-block;
+}
+#navbar-links a {
+  font-size: 22px;
+  color: #FFF;
+  text-decoration: none;
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+}
+
+.nav-item.active {
+  border-bottom: 3px solid #FFF;
+}
+
+/* Efeito Hover */
+.nav-item {
+  transition: .35s;
+  cursor: pointer;
+}
+#navbar-links:hover :not(:hover) {
+  opacity: .4;
+  transform: scale(0.9);
+  color: #fff;
+}
+
+/* Slider */
+
+.container-fluid {
+  padding: 0;
+}
+
+#mainSlider .carousel-inner, #mainSlider .carousel-item {
+  height: 90vh;
+}
+
+#mainSlider .carousel-caption {
+  top: 30%;
+}
+
+/* Texto nos  Slides */
+#mainSlider .carousel-caption h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#mainSlider .carousel-caption p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 90px;
+  color: #FFF;
+}
+
+#mainSlider .list-banner2 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+#mainSlider .list-banner2 li {
+  font-size: 1.5rem;
+  color: white;
+  text-align: start;
+}
+
+.main-btn {
+  background-color: seagreen;
+  color: #FFF;
+  text-transform: uppercase;
+  padding: 20px 30px;
+  border-radius: 10px;
+  border: 3px solid transparent;
+  transition: .5s;
+  font-size: 1rem;
+}
+
+.main-btn:hover {
+  text-decoration: none;
+  color: #FFF;
+  background-color: transparent;
+  border-color: seagreen;
+  box-shadow: 0px 0px 10px 2px rgba(172, 255, 47, 0.486);
+}
+
+.carousel-indicators .active {
+  background-color: seagreen;
+}
+
+/* Sobre a empresa */
+
+#about-area {
+  background-color: #F9F9F9;
+
+  img {
+    margin-top: 0;
+    margin-bottom: 30px;
+  } 
+
+  @media(max-width: 624px) {
+    /* padding: 0px 10px; */
+
+    .about-text {
+      padding: 0px 22px;
+    }
+    
+  }
+}
+
+.main-title {
+  color: #444;
+  margin: 0 0 65px 0;
+  font-size: 40px;
+  text-align: center;
+}
+
+.main-title::after {
+  content: "";
+  border-top: 2px solid #333;
+  width: 15%;
+  position: absolute;
+  top: 60px;
+  left: 42.5%;
+}
+
+.about-title {
+  font-size: 17px;
+  color: #444;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#about-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+#about-list li {
+  line-height: 0px;
+}
+
+#about-list i {
+  color: yellowgreen;
+  margin-right: 15px;
+}
+
+/* Serviços */
+
+.service-box {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.service-box i, .service-box h4 {
+  transition: .5s;
+}
+
+.service-box i {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.service-box h4 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.service-box:hover > i, .service-box:hover > h4 {
+  color: yellowgreen;
+}
+
+/* Dados */
+
+.circle-box div {
+  padding: 0 40px;
+}
+
+.progressbar-text {
+  font-weight: bold;
+  font-size: 32px;
+  text-shadow: 0 0 20px #000, 0 0 40px #000;
+}
+
+#data-area p {
+  color: #FFF;
+  text-align: center;
+  font-size: 26px;
+  margin-top: 20px;
+}
+
+/* Time */
+
+.card-body {
+  text-align: center;
+}
+
+/* Trabalhe conosco */
+
+#apply-area {
+  height: 500px;
+}
+
+#apply-area .container-fluid, #apply-area .row {
+  height: 100%;
+}
+
+#apply-area .apply-box {
+  padding: 0px 0px;
+  text-align: center;
+}
+
+#company-img {
+  background-image: url('../img/fundo.png');
+  background-size: cover;
+  height: auto;
+}
+
+#pattern-img h4, #pattern-img p {
+  color: #FFF;
+}
+#pattern-img p {
+  color: #fff;
+  flex-wrap: nowrap;
+  padding: 20px;
+}
+
+#pattern-img h4 {
+  margin-top: 8%;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+#pattern-img p {
+  margin-bottom: 20px;
+}
+
+#apply-btn {
+  display: block;
+  height: auto;
+  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  background-color: transparent;
+  border-color: #FFF;
+}
+
+#apply-btn:hover {
+  border-color: darkgreen;
+  background-color: seagreen;
+}
+
+/* Portfólio */
+
+.project-box {
+  margin-bottom: 30px;
+}
+
+#filter-btn-box {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+#portfolio-area .filter-btn {
+  color: #444;
+  border: 1px solid #444;
+  background-color: transparent;
+  text-transform: none;
+  margin: 0 15px;
+  min-width: 100px;
+  width: auto;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+}
+
+#portfolio-area .filter-btn.active, #portfolio-area .filter-btn:hover {
+  color: #FFF;
+  border: 1px solid darkgreen;
+  background-color: seagreen;
+}
+
+/* News Letter */
+
+#news-area {
+  text-align: center;
+  background-color: #F9F9F9;
+}
+
+#news-area p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+#email-input {
+  border-radius: 0;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: 1px solid darkgreen;
+  display: inline;
+  box-sizing: border-box;
+  width: 40%;
+  height: 40px;
+}
+
+#news-btn {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: 1px solid darkgreen;
+  background-color: seagreen;
+  color: #FFF;
+  text-transform: uppercase;
+  height: 40px;
+  padding: 0 30px;
+  margin-left: -130px;
+  position: absolute;
+  transition: .5s;
+}
+
+#news-btn:hover {
+  background-color: #FFF;
+  color: seagreen;
+}
+
+/* Call To Action */
+
+#call-area {
+  background-color: seagreen;
+  text-transform: uppercase;
+}
+
+#call-area .container {
+  padding: 40px 100px;
+}
+
+#call-area .row {
+  display: block;
+  text-align: center;
+}
+
+#call-area p {
+  color: #FFF;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 0;
+  height: 60px;
+  line-height: 60px;
+  letter-spacing: 2px;
+  display: inline;
+}
+
+#call-area #call-btn {
+  background-color: #FFF;
+  color: seagreen;
+  font-weight: bold;
+  margin-left: 30px;
+  font-size: 20px;
+  width: auto;
+  letter-spacing: 2px;
+}
+
+/* Footer */
+
+#contact-area {
+  text-align: center;
+}
+
+.contact-box {
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid seagreen;
+}
+
+.contact-box i {
+  color: #444;
+  border: solid 1px #444;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact-box p {
+  font-size: 16px;
+}
+
+.contact-tile {
+  font-weight: bold;
+  color: seagreen;
+}
+
+#msg-box p {
+  font-size: 22px;
+}
+
+#contact-form input[type="text"], #contact-form textarea {
+  margin-bottom: 15px;
+  border-radius: 0;
+}
+
+#contact-form .main-btn {
+  width: 120px;
+  height: 50px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+#contact-form .main-btn:hover {
+  color: seagreen;
+}
+
+/* Copy */
+
+#copy-area {
+  background-color: #F1F1F1;
+}
+
+#copy-area .container {
+  padding: 10px 0;
+  text-align: center;
+}
+
+#copy-area .container p {
+  margin-bottom: 0;
+}
+
+#copy-area .container a {
+  font-weight: bold;
+  color: #444;
+}
+
+#copy-area .container a:hover {
+  text-decoration: none;
+  color: seagreen;
+}
+
+/* responsive */
+@media(max-width: 768px) {
+  
+  /* geral */
+
+  .container {
+    padding: 20px 0;
+  }
+
+  /* navbar */
+  #logo {
+    width: 60px;
+  }
+  
+  /* slider */
+  #mainSlider .carousel-inner, #mainSlider .carousel-item {
+    height: auto;
+  }
+
+  #mainSlider .carousel-caption h2 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+
+  #mainSlider .carousel-caption p {
+    font-size: 0.8rem;
+    margin-bottom: 40px;
+  }
+
+  #mainSlider .carousel-caption .main-btn {
+    padding: 10px;
+  }
+
+  #mainSlider .carousel-caption ul li {
+    font-size: 0.8rem;
+  }
+
+  .carousel-caption {
+    left: 10%;
+    right: 10%;
+  }
+
+  
+  /* Sobre */
+  /* #about-area {
+    font-size: 0.9rem;
+    
+  } */
+
+
+  .col-md-6 ul {
+    letter-spacing: 1px;
+  }
+  .col-md-6 ul li {
+    margin: 6px;
+  }
+  
+  /* data */
+  .circle-box div {
+    padding: 0 10px;
+  }
+
+  #data-area p {
+    font-size: 16px;
+  }
+  
+  /* team */
+  .card-title {
+    font-size: 14px;
+  }
+
+  .card-text {
+    font-size: 12px;
+  }
+
+  /* apply */
+  #apply-area .apply-box {
+    padding: 50px 25px;
+  }
+
+  /* news */
+  #news-area p {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #email-input {
+    width: 70%;
+  }
+
+  #call-area {
+    margin-top: 30px;
+  }
+
+  #call-area .container {
+    padding: 30px;
+  }
+
+  #call-area p, #call-area #call-btn {
+    font-size: 16px;
+  }
+
+#portfolio-area .main-btn {
+  font-size: 0.9rem;
+}
+
+}
+
+/* Telas Menores */
+
+@media(max-width: 624px) {
+
+  .navbar-expand-lg {
+    padding: 10px;
+    padding-bottom: 20px;
+    position: relative;
+    background-color: #2e8b57;
+  }
+  #navbar-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+
+  /* slider */
+  #mainSlider {
+    margin-top: 90px;
+  }
+
+  #mainSlider .carousel-caption {
+    top: 5%;
+  }
+
+  #mainSlider .carousel-caption h2 {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  #mainSlider .carousel-caption p {
+    display: none;
+  }
+  #mainSlider .list-banner2 ul li {
+    font-size: 8px;
+  }
+
+  .carousel-caption .main-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  /* about */
+  .main-title {
+    font-size: 30px;
+  }
+
+  .navbar-links ul li a {
+    flex-direction: column;
+  }
+
+  /* #about-area img {
+    margin-top: 0;
+    margin-bottom: 30px;
+  } */
+
+  /* data */
+  .circle-box {
+    width: 50%;
+  }
+
+  #team-area .col-md-3 {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+
+  /* apply */
+  #apply-area {
+    height: auto;
+  }
+
+  #company-img {
+    display: none;
+  }
+
+  /* filter */
+  #portfolio-area .filter-btn {
+    margin-bottom: 20px;
+  }
+
+  .project-box {
+    width: 50%;
+  }
+
+  /* news */
+  #news-area .main-title {
+    font-size: 24px;
+  }
+
+  #news-area p {
+    font-size: 16px;
+  }
+
+  #email-input {
+    width: 80%;
+  }
+
+  #call-area p, #call-area #call-btn {
+    font-size: 14px;
+    letter-spacing: 0;
+  }
+
+  #call-area p, #call-area #call-btn {
+    margin: 0;
+    width: 50%;
+  }
+
+  /* contact */
+  .contact-box {
+    border: none;
+    margin-bottom: 0;
+  }
+
+}

@@ -1,0 +1,388 @@
+<!-- PROJETO INTEGRADO MULTIDICIPLICAR  (PIM) - ESTRUTURA HTML -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Green</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Favicon no title da página -->
+  <link rel="icon" href="img/favicon-title/favicon-solid.svg" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/b10b9bcecd.js" crossorigin="anonymous"></script>
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+  <!-- Estilos -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Scripts (jQuery não pode ser o slim que vem do Boostrap) -->
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/bf7e05c402.js" crossorigin="anonymous"></script>
+  <!-- Progress Bar -->
+  <script src="js/progressbar.min.js"></script>
+  <!-- Parallax -->
+  <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="container" id="nav-container">                                          
+      <!-- add essa class -->
+      <nav class="navbar navbar-expand-lg fixed-top navbar-transparent">
+        <a class="navbar-brand" href="index.html">
+          <p>Urban Green</p>
+          <img id="logo" src="img/logo.png" alt="Logo da Urban Green"> 
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+          <div class="navbar-nav">
+            <ul>
+              <li class=""><a class="nav-item nav-link" id="home-menu" href="#">Inicio</span></a></li>
+              <li class=""><a class="nav-item nav-link" id="about-menu" href="#">Sobre</span></a></li>
+              <li class=""><a class="nav-item nav-link" id="services-menu" href="#">Serviços</span></a></li>
+              <li class=""><a class="nav-item nav-link" id="team-menu" href="#">Time</span></a></li>
+              <li class=""><a class="nav-item nav-link" id="contact-menu" href="#">Contato</span></a></li>
+            </ul>
+          </div>
+        </div> <!-- navbar-links -->
+      </nav> <!-- navbar-expand-lg -->
+    </div>
+
+  </header>
+
+  <main>
+    <div class="container-fluid">
+      
+      <!-- slider -->
+
+      <div id="mainSlider" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#mainSlider" data-slide-to="0" class="active"></li>
+          <li data-target="#mainSlider" data-slide-to="1"></li>
+          <li data-target="#mainSlider" data-slide-to="2"></li>
+        </ol>     
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/banner1.png" class="d-block w-100" alt="Fazenda Urbana">
+
+            <!-- tirar classe d-none -->
+            <div class="carousel-caption d-md-block">
+              <h2>Uma fazenda no meio da cidade.</h2>
+              <p>Hortaliças frescas, colhidas diáriamente, livres de agrotóxicos. Levamos até você!</p>
+              <a href="https://api.whatsapp.com/send?phone=5511949799760" class="main-btn">Conhecer nossa fazenda</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/banner2.png" class="d-block w-100" alt="Detalhes fazem a Diferença">
+            <div class="carousel-caption d-md-block">
+              <h2>Detalhes que fazem a diferença.</h2>
+                <div class="list-banner2">
+                  <ul class="items-list">
+                    <li>Produção anual: Cultivo contínuo em fazendas urbanas.</li>
+                    <li>Tecnologia: Hidroponia sem agrotóxicos em estufas controladas.</li>
+                    <li>Eficiência: 28x mais produtivo e 90% menos água.</li>
+                    <li>Sustentável: Baixa emissão de carbono e 2% de perda.</li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/banner3.png" class="d-block w-100" alt="Qualidade de Vida">
+            <div class="carousel-caption d-md-block">
+              <h2>Quer uma qualidade de vida melhor?</h2>
+              <p>A Urban Green conta com um time altamente qualificado para trazer o melhor para você.</p>
+              <a href="https://api.whatsapp.com/send?phone=5511949799760" class="main-btn">Entre em contato</a>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#mainSlider" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#mainSlider" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+      <!-- Sobre a empresa -->
+
+      <div id="about-area">
+        <div class="container">
+            <div class="row">
+              <div class="col-12"> 
+                <h3 class="main-title">Sobre a Urban Green</h3>
+              </div>
+              <div class="col-md-6">
+                <img class="img-fluid" src="img/world.jpg" alt="Fazenda Urbana">
+              </div>
+              <div class="col-md-6 about-text">
+                <h3 class="about-title">Cultivando o Futuro, Hoje!</h3>
+                <p>Estamos no mercado há mais de 10 anos em nossa fazenda, unimos tecnologia de ponta e práticas sustentáveis para transformar o modo como as cidades produzem e consomem alimentos.</p>
+                <p>Com inovação em cada detalhe,
+                  criamos um ambiente controlado que garante hortaliças frescas e saudáveis durante todo o ano, sem a necessidade de agrotóxicos e com impacto mínimo ao meio ambiente proporcionando os  melhores produtos aos nossos clientes.</p>
+                <p>Por que escolher a Urban Green?</p>
+                <ul id="about-list">
+                  <li><i class="fas fa-check"></i> Tecnologia inteligente</li>
+                  <li><i class="fas fa-check"></i> Sustentabilidade em primeiro lugar</li>
+                  <li><i class="fas fa-check"></i> Qualidade que você sente</li>
+                  <li><i class="fas fa-check"></i> Inovação constante</li>
+                  <li><i class="fas fa-check"></i> Produção local e urbana</li>
+                </ul>
+                <p>Cultivamos mais que alimentos, cultivamos um novo jeito de pensar, consumir e cuidar do planeta. Bem-vindo à revolução verde!</p>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <!-- Serviços da empresa / Especialidades -->
+       
+      <div id="services-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+                <h3 class="main-title">Nossas especialidades</h3>
+            </div>
+            <div class="col-md-4 service-box">
+              <i class="fas fa-star"></i>
+              <h4>Hortaliças Premium Durante Todo o Ano</h4>
+              <p>Hortaliças frescas, disponíveis em todas as estações do ano. Independentemente do clima.</p>
+            </div>
+            <div class="col-md-4 service-box">
+              <i class="fas fa-certificate"></i>
+              <h4>Alimentos Sem Agrotóxicos e Certificados</h4>
+              <p>Produtos livres de pesticidas e cultivados de forma sustentável,
+                 com certificações, segurança e responsabilidade ambiental.</p>
+            </div>
+            <div class="col-md-4 service-box">
+              <i class="fas fa-leaf"></i>
+              <h4>Saladas Prontas para Consumo</h4>
+              <p>Produzimos folhas verdes e mix de saladas frescas e higienizadas, prontas para serem consumidas.</p>
+            </div>
+            <div class="col-md-4 service-box">
+              <i class="fas fa-tree"></i>
+              <h4>Agroflorestas Urbanas</h4>
+              <p>Integração de árvores frutíferas e plantas perenes em um sistema que imita os ecossistemas naturais, promovendo biodiversidade e uso sustentável de recursos.</p>
+            </div>
+            <div class="col-md-4 service-box">
+              <i class="fas fa-hands-helping"></i>
+              <h4>Suporte 7 dias na Semana</h4>
+              <p>Você sempre terá alguem da equipe disponível para suporte, em diferentes plataformas. (chat, email, whatsapp)</p>
+            </div>
+            <div class="col-md-4 service-box">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <h4>Personalize Seu Pedido</h4>
+              <p>Personalize seu mix de hortaliças e saladas. Escolha suas combinações favoritas e receba os produtos do jeito que você gosta.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Dados da empresa -->
+      <div id="data-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-xs-6 circle-box">
+              <div id="circleA"></div>
+              <p>+ de Produtos entregues</p>
+            </div>
+            <div class="col-md-3 col-xs-6 circle-box">
+              <div id="circleB"></div>
+              <p>+ de Clientes Felizes</p>
+            </div>
+            <div class="col-md-3 col-xs-6 circle-box">
+              <div id="circleC"></div>
+              <p>Colaboradores</p>
+            </div>  
+            <div class="col-md-3 col-xs-6 circle-box">
+              <div id="circleD"></div>
+              <p>Cafézinhos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Time -->
+      <div id="team-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3 class="main-title">Nosso time</h3>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="img/profile1.jpg" class="card-img-top" alt="Imagem de Perfil 1">
+                <div class="card-body">
+                  <h5 class="card-title">Cleitin do Fliperama</h5>
+                  <p class="card-text">Gerente de  Fazenda</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="img/profile2.jpg" class="card-img-top" alt="Imagem de Perfil 2">
+                <div class="card-body">
+                  <h5 class="card-title">Cat Nude</h5>
+                  <p class="card-text">Agrônomo Urbano</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="img/profile3.jpg" class="card-img-top" alt="Imagem de Perfil 3">
+                <div class="card-body">
+                  <h5 class="card-title">Hadje Swag</h5>
+                  <p class="card-text">Esp. em Hidro/Aquaponia.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="img/profile4.jpg" class="card-img-top" alt="Imagem de Perfil 4">
+                <div class="card-body">
+                  <h5 class="card-title">Primo do Cleitin</h5>
+                  <p class="card-text">Coord.Edu/Comunidade</p>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <!-- Trabalhe conosco -->
+      <div id="apply-area">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6 apply-box" id="company-img"></div>
+            <div class="col-md-6 apply-box" id="pattern-img">
+              <h4>Venha Cultivar o Futuro com a Gente!</h4>
+              <p>
+                Estamos em busca de pessoas apaixonadas por inovação, sustentabilidade e pelo desejo de fazer a diferença no mundo. 
+                Se você quer trabalhar em um ambiente dinâmico, onde tecnologia e natureza se encontram para transformar o futuro da alimentação, 
+                nossa fazenda urbana é o lugar certo para você!</p>
+              <p>Clique no botão abaixo e confira os benefícios e as posições em aberto.</p>
+              <a href="#" class="main-btn" id="apply-btn">Saiba Mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Portfólio -->
+      <div id="portfolio-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="main-title">Conheça nossos produtos</h3>
+            </div>
+            <div class="col-md-12" id="filter-btn-box">
+              <button class="main-btn filter-btn active" id="all-btn">Todos</button>
+              <button class="main-btn filter-btn" id="dev-btn"> Hortaliças</button>
+              <button class="main-btn filter-btn" id="dsg-btn">Ervas e Temperos</button>
+              <button class="main-btn filter-btn" id="seo-btn">Plantas medicinais</button>
+            </div>
+            <div class="col-md-4 project-box dev">
+              <img src="img/proj1.jpg" class="img-fluid" alt="Projeto 1">
+            </div>
+            <div class="col-md-4 project-box dsg">
+              <img src="img/proj2.jpg" class="img-fluid" alt="Projeto 2">
+            </div>
+            <div class="col-md-4 project-box seo">
+              <img src="img/proj3.jpg" class="img-fluid" alt="Projeto 3">
+            </div>
+            <div class="col-md-4 project-box dev">
+              <img src="img/proj4.jpg" class="img-fluid" alt="Projeto 4">
+            </div>
+            <div class="col-md-4 project-box dsg">
+              <img src="img/proj5.jpg" class="img-fluid" alt="Projeto 5">
+            </div>
+            <div class="col-md-4 project-box seo">
+              <img src="img/proj6.jpg" class="img-fluid" alt="Projeto 6">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Newsletter -->
+      <div id="news-area">
+        <div class="container">
+          <div class="col-md-12">
+            <h3 class="main-title">Fique por dentro das novidades</h3>
+          </div>
+          <p>Assine nossa lista de e-mails, e receba nossos conteúdos sobre novos produtos e receitas</p>
+          <form action="">
+            <input type="text" class="form-control" id="email-input" name="email" placeholder="Seu melhor e-mail">
+            <input type="submit" id="news-btn" value="Inscrever">
+          </form>
+        </div>
+      </div>
+      <!-- Call to Action -->
+      <div id="call-area">
+        <div class="container">
+            <div class="row">
+              <p>Quem conhece recomenda!</p>
+              <button class="main-btn" id="call-btn">Orçar</button>
+            </div>
+          </div>
+      </div>
+    </div>
+  </main>
+  <!-- Rodapé -->
+  <footer>
+    <div id="contact-area">
+      <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="main-title">Entre em contato conosco</h3>
+            </div>
+            <div class="col-md-4 contact-box">
+              <i class="fas fa-phone"></i>
+              <p><span class="contact-tile">Contato:</span> (11) 94002-8922</p>
+              <p><span class="contact-tile">Funcionamento:</span> 7:00 - 18:00</p>
+            </div>
+            <div class="col-md-4 contact-box">
+              <i class="fas fa-envelope"></i>
+              <p><span class="contact-tile">Envie um email:</span> contato@urbangreen.com.br</p>
+            </div>
+            <div class="col-md-4 contact-box">
+              <i class="fas fa-map-marker-alt"></i>
+              <p><span class="contact-tile">Venha tomar um café:</span> Av. Marquês - 1314</p>
+            </div>
+            <div class="col-md-6" id="msg-box">
+              <p>Ou nos deixe uma mensagem:</p>
+            </div>
+            <div class="col-md-6" id="contact-form">
+              <form action="">
+                <input type="text" class="form-control" placeholder="E-mail" name="email">
+                <input type="text" class="form-control" placeholder="Assunto" name="subject">
+                <textarea class="form-control" rows="3" placeholder="Sua mensagem..." name="message"></textarea>
+                <input type="submit" class="main-btn">
+              </form>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div id="copy-area">
+      <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+              <p>Desenvolvido por <a href="https://github.com/micbatistdev" target="_blank">Michael Batista</a> &copy; 2024</p>
+            </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scripts do projeto -->
+  <!-- defer na tag <script> abre o html após o html -->
+
+  <script defer src="js/scripts.js"></script>
+
+</body>
+
+</html>
