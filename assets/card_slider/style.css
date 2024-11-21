@@ -1,0 +1,224 @@
+  /* Google Font CDN Link */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+      display: flex;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+      background: #F5F5F5; /* Light blue background */
+      position: relative;
+  }
+
+  body::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      background: #48a36d; /* Dark teal background */
+      clip-path: inset(47% 0 0 0);
+      z-index: -1;
+      height: 100%;
+  }
+
+  ::selection {
+      background: #00bfff; /* Dark teal selection */
+      color: #fff;
+  }
+
+  .container {
+      max-width: 950px;
+      width: 100%;
+      overflow: hidden;
+      padding: 80px 0;
+      position: relative;
+  }
+
+  .container .main-card {
+      display: flex;
+      justify-content: space-evenly;
+      width: 200%;
+      transition: 1s;
+  }
+
+  #two:checked ~ .main-card {
+      margin-left: -100%;
+  }
+
+  .container .main-card .cards {
+      width: calc(100% / 2 - 10px);
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 20px;
+      justify-content: space-between;
+  }
+
+  .main-card .cards .card {
+      width: calc(100% / 3 - 10px);
+      background: #ffffff; /* White background for cards */
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transition: all 0.4s ease;
+      position: relative;
+  }
+
+  .main-card .cards .card:hover {
+      transform: translateY(-10px);
+  }
+
+  .cards .card .content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+  }
+
+  .cards .card .content .img {
+      height: 130px;
+      width: 130px;
+      border-radius: 50%;
+      padding: 3px;
+      background: #00ff37; /* Dark teal background for image circle */
+      margin-bottom: 14px;
+  }
+
+  .card .content .img img {
+      height: 100%;
+      width: 100%;
+      border: 3px solid #ffffff; /* White border for image */
+      border-radius: 50%;
+      object-fit: cover;
+  }
+
+  .card .content .name {
+      font-size: 22px; /* Increased font size for name */
+      font-weight: 600; /* Bolder weight for name */
+      margin-top: 10px;
+  }
+
+  .card .content .job {
+      font-size: 18px; /* Slightly smaller font size for job */
+      color: #48a36d; /* Dark teal for job title */
+      margin: 5px 0;
+  }
+
+  .card .content .description {
+      font-size: 14px; /* Description font size */
+      color: #555; /* Dark gray for description */
+      margin: 10px 0;
+      line-height: 1.5; /* Improved line spacing */
+  }
+
+  .card .content .media-icons {
+      margin-top: 10px;
+      display: flex;
+  }
+
+  .media-icons a {
+      text-align: center;
+      line-height: 35px;
+      height: 35px;
+      width: 35px;
+      margin: 0 6px; /* Increased margin for spacing */
+      font-size: 18px; /* Increased font size for icons */
+      color: #ffffff; /* White color for icons */
+      border-radius: 50%;
+      background: #48a36d; /* Dark teal background for icon circles */
+      transition: all 0.3s ease;
+  }
+
+  .media-icons a:hover {
+      color: #00796b; /* Dark teal color on hover */
+      background-color: #ffffff; /* White background on hover */
+      border: 2px solid ; /* Dark teal border on hover */
+      border: 2px solid ; /* Dark teal border on hover */
+  }
+
+  .container .button {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+  }
+
+  .button label {
+      height: 15px;
+      width: 15px;
+      border-radius: 20px;
+      background: #ffffff; /* White background for button */
+      margin: 0 4px;
+      cursor: pointer;
+      transition: all 0.5s ease;
+  }
+
+  .button label.active {
+      width: 35px; /* Active button size */
+  }
+
+  #one:checked ~ .button .one {
+      width: 35px; /* Active button size for first */
+  }
+
+  #one:checked ~ .button .two {
+      width: 15px; /* Inactive size for second */
+  }
+
+  #two:checked ~ .button .one {
+      width: 15px; /* Inactive size for first */
+  }
+
+  #two:checked ~ .button .two {
+      width: 35px; /* Active button size for second */
+  }
+
+  input[type="radio"] {
+      display: none;
+  }
+
+  /* Arrow Styling */
+  .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      background-color: #48a36d; /* Dark teal background for arrows */
+      color: #ffffff; /* White color for arrows */
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 50%; /* Circular buttons for arrows */
+      width: 50px; /* Increased width for better click area */
+      height: 50px; /* Increased height for better click area */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  }
+
+  .arrow.left {
+      left: 30px;
+  }
+
+  .arrow.right {
+      right: 30px;
+  }
+
+  @media (max-width: 768px) {
+      .main-card .cards .card {
+          margin: 20px 0 10px 0;
+          width: calc(100% / 2 - 10px);
+      }
+  }
+
+  @media (max-width: 600px) {
+      .main-card .cards .card {
+          width: 100%;
+      }
+  }
